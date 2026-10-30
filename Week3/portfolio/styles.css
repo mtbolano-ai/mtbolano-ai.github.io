@@ -1,0 +1,161 @@
+
+
+.tiny5-duo-uniquifier {
+  font-family: "Tiny5 Duo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  width: 100%;
+}
+
+.silkscreen-regular {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.silkscreen-bold {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
+/* Set our defaults and our constants. We need to use the ROOT selector. */
+
+*{
+    --aquamarine: #36f1cdff;
+    --twilight-indigo: #313b72ff;
+    --wisteria-blue: #7f96ffff;
+    --petal-frost: #f5d7e3ff;
+    --cherry-blossom: #f4a5ae;
+    color: var(--twilight-indigo);
+}
+
+/* selecting just the body element */
+body {
+    background-color: #00b7ff;
+    background-image: url('./assets/polybackground.png');
+    text-align: center;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+}
+
+header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+    font-family: "Roboto Mono", monospace;
+    color: blue;
+    font-size: 32px;
+    font-weight: 700;
+    background-color: rgb(135, 221, 255);
+    opacity: .5;
+    /* Opacity is the property that allows us to change how see-through our elements are. Range of values: 1 is 100% (not transparent at all) and 0 is invisible. */
+}
+/*PSEUDO-ELEMENTS reference: https: //www.w3schools.com/css/css_pseudo_elements.asp */
+header::first-letter{
+    font-size: 48px;
+}
+
+/* Style the title card/hero text and select by class. */
+
+.title{
+  font-family: "Tiny5 Duo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  width: 100%;
+    font-size: 72px;
+    margin-bottom: 32px;
+    line-height: 84px;
+
+}
+
+.title::first-letter{
+    color: blue;
+}
+
+h2{
+  font-family: "Tiny5 Duo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  width: 100%;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+    text-shadow: 0 5px 5px rgba(0,0,0,0.30), 0 1px 3px rgba(0,0,0,0.8)
+
+}
+
+.cards {
+    background-color: var(--wisteria-blue)
+}
+
+.cards > div {
+
+    background-color: var(--cardColor);
+    padding: 16px;
+    border: .5px solid var(--borderColor);
+    border-radius: 8px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+    /*
+    Short hand for centering items is margin: 0 auto margin-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
+    */
+
+    transition: all 500ms;
+}
+
+.cards div:hover{
+    
+    box-shadow: 8px 8px var(--twilight-indigo);
+
+}
+
+.cards div > img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 2px 1px 1px rgba(0,0,0,.4);
+}
+
+h3 {
+  font-family: "Tiny5 Duo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  width: 100%;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+}
+.education {
+    background-color: var(--petal-frost);
+}
+
+.education > ul {
+    font-size: 24px;
+}
+
+.education > ul li::marker{
+    content: "--->";
+}
+
+.education > ul li {
+    padding: 16px;
+}
+
+.year {
+    color: blue;
+}
