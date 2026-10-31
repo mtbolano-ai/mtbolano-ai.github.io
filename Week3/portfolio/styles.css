@@ -30,7 +30,7 @@
     --wisteria-blue: #7f96ffff;
     --petal-frost: #f5d7e3ff;
     --cherry-blossom: #f4a5ae;
-    color: var(--twilight-indigo);
+    color: var(blue);
 }
 
 /* selecting just the body element */
