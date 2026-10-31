@@ -81,11 +81,11 @@ header::first-letter{
 }
 
 h2{
-  font-family: "Tiny5 Duo", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-  width: 100%;
+    font-family: "Tiny5 Duo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    width: 100%;
     margin-bottom: 32px;
     text-transform: uppercase;
     text-shadow: 0 5px 5px rgba(0,0,0,0.30), 0 1px 3px rgba(0,0,0,0.8)
@@ -132,16 +132,19 @@ h2{
 }
 
 h3 {
-  font-family: "Tiny5 Duo", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-  width: 100%;
+    font-family: "Tiny5 Duo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    width: 100%;
     margin-bottom: 32px;
     text-transform: uppercase;
 }
 .education {
     background-color: var(--petal-frost);
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .education > ul {
@@ -149,7 +152,7 @@ h3 {
 }
 
 .education > ul li::marker{
-    content: "--->";
+    content: "-->";
 }
 
 .education > ul li {
@@ -158,4 +161,10 @@ h3 {
 
 .year {
     color: blue;
+}
+
+p {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
