@@ -1,0 +1,250 @@
+
+.limelight-regular {
+  font-family: "Limelight", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+    --primarySky: #99ccff;
+    --primaryMauve: #9973bf;
+    --fontNavy: #003366;
+    --emphasisYellow: #ffe646;
+    font-size: 12px;
+    font-family: "Limelight", sans-serif;
+
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: var(--primarySky);
+}
+
+nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: var(--primaryMauve);
+    color: var(--fontNavy);
+    display: flex;
+    justify-content: center;
+    align-items : center;
+    padding: 24px;
+    margin: 0 auto;
+    font-family: "LimeLight", sans-serif;
+    width: 100vw;
+    z-index: 10;
+    height: 96px;
+}
+
+nav > img {
+    height: 60px;
+    width: 60px;
+}
+
+nav > ul {
+    margin-left: 24px;
+    flex-grow: auto;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul > li {
+    padding: 12px;
+    margin-right: 12px;
+}
+
+nav ul > li:hover{
+    background-color: var(--emphasisYellow);
+    color: var(--fontNavy);
+}
+
+.hero {
+    background-image: url('./assets/Megalo_64_large.png');
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 36px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.hero  header, .hero p {
+  margin: 0 auto; 
+  z-index: 9;
+}
+
+.hero header {
+  font-size: 60px; 
+  color: var(--fontNavy); 
+  
+}
+
+.hero p {
+  font-size: 48px; 
+  color: var(--fontNavy); 
+}
+
+#overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 8;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--primarySky);
+}
+
+.message {
+    display: flex;
+    width: 95vw;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 36px;
+    color: var(--fontNavy)
+}
+
+.contentLeft {
+    color: var(--fontNavy);
+    padding: 12px;
+    font-family: "LimeLight", sans-serif;
+    font-size: 1.5rem;
+}
+
+.contentRight > p {
+    font-family: "LimeLight", sans-serif;
+    font-size: 1.5rem;
+}
+
+.director {
+    width: 95vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#directorImage > img {
+    width: 75%
+}
+
+.contentRight {
+    padding: 12px;
+    color: var(--fontNavy);
+}
+
+.dashboard {
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 150px 150px;
+  gap: 4px 4px;
+}
+
+.dashboard > div {
+  background-color: var(--emphasisYellow);
+  color: var(--fontNavy);
+  border-radius: 4px; 
+  padding: 12px; 
+}
+
+.dashboard > div > h2 {
+  margin-bottom: 4px; 
+  color: var(--primaryMauve);
+}
+
+footer {
+  display: grid; 
+  color: var(--fontNavy);
+  grid-template-columns: 150px repeat(4, 1fr);
+  column-gap: 6px;
+}
+
+footer > img {
+  width: 100%;
+}
+
+footer > div {
+  padding: 12px;
+}
+
+#stats{
+  padding-left: 24px;
+}
+
+@media screen and (max-width: 720px) {
+  *{
+    font-size: 14px; 
+  }
+  
+    nav {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      background-color: var(--primarySky);
+      color: var(--fontNavy);
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 12px;
+      margin: 0 auto;
+      font-family: "LimeLight", sans-serif;
+      width: 100vw;
+      z-index: 10;
+      height: 72px;
+    }
+
+        nav>ul {   
+          margin-left: 12px;    
+          flex-grow: auto;
+          list-style-type: none;
+          display: flex;
+          justify-content: space-around;
+        }
+
+    .hero{
+        box-sizing: border-box;
+    }
+
+    .director, .message {
+      display: block; 
+      width: 100vw; 
+      padding: .5rem; 
+    }
+
+        .dashboard {
+          padding: 24px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(3, 1fr);
+          gap: 4px 4px;
+    
+        }
+
+    .message > img {
+      width: 100%; 
+    }
+
+        footer {
+          display: flex;
+          background-color: var(--primaryMauve);
+          color: var(--fontNavy);
+          flex-direction: column;
+    
+        }
+
+        footer h2 { 
+          color: var(--fontNavy);
+        }
+
+        footer >  div > img {
+          display: none; 
+        }
+}
