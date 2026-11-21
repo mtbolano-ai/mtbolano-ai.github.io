@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Interactive Website</title>
+  <style>
+    * {
+    --Mauve: #aa6ee6;
+    --Navy: #0e0089;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+        background-color: var(--Mauve);
+        color: var(--Navy);
+    }
+    button {
+        margin: 10px;
+        padding: 10px 20px;
+        cursor: pointer;
+        color: var(--Navy);
+    }
+    #message {
+        margin-top: 20px;
+        font-weight: bold;
+        color: var(--Navy);
+    }
+    #myList {
+        margin-top: 20px;
+        font-weight: bold;
+        color: var(--Navy);
+    }
+  </style>
+</head>
+<body>
+
+<h1>Matthew's Background</h1>
+<p>Click the buttons below to learn a bit about me.</p>
+
+<button id="btn1">My name is...</button>
+<button id="btn2">Favorite Colors</button>
+<button id="btn3">Description</button>
+<button id="btn4">List of Talents</button>
+<ul id="myList"></ul>
+<button id="btn5">Reset Page</button>
+
+<div id="message"></div>
+
+<script>
+  document.getElementById('btn1').addEventListener('click', function() {
+    document.title = "Matthew Bolanos-Chavez";
+  });
+
+  document.getElementById('btn2').addEventListener('click', function() {
+    document.body.style.backgroundColor =
+      document.body.style.backgroundColor === 'dodgerblue' ? 'gold' : 'dodgerblue';
+  });
+
+  document.getElementById('btn3').addEventListener('click', function() {
+    document.getElementById('message').textContent = "Howdy! Matthew here. When I was young, one of my favorite things to do was to play video games. As my life went on, I became more and more aware of the inner workings of video games and how these developers have handled the tools they were offered. That's why I wanna be a game developer myself so I can share my love for the art form to the world. Yes, you read that clearly.";
+  });
+
+  document.getElementById("btn4")
+    .addEventListener("click", function() {
+      const list = document.getElementById("myList");
+      list.innerHTML = "";
+      const items = ["Drawing", "Music Writing", "Coding (kinda)", "3D Modeling"];
+      items.forEach(function(item) {
+        const li = document.createElement("li");
+        li.textContent = item;
+        list.appendChild(li);
+      });
+    });
+
+  // 5. Reset page to initial state
+  document.getElementById('btn5').addEventListener('click', function() {
+    document.title = "My Interactive Website";
+    document.body.style.backgroundColor = "mediumpurple";
+    document.getElementById('message').textContent = "";
+    document.getElementById('myList').textContent = "";
+  });
+</script>
+<img src="./Megalo_64 Logo LoRez.png">
+</body>
+</html>
